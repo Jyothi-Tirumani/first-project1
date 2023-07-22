@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    min-height: 100vh;
+    background: url("nature.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 10000px;
+}
+
+.header {
+    position: fixed;
+    padding: 20px 30px;
+    background-color: rgb(83, 136, 169);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo:hover {
+    font-size: 32px;
+    color: #fff;
+    border: 2px solid tomato;
+}
+
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 20px;
+
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: tomato;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+
+/* Product list Started*/
+
+#prdt {
+    display: inline-block;
+    z-index: 10001;
+    cursor: pointer;
+    position: relative;
+
+}
+
+
+#prdt .prdt-content {
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    width: 200px;
+    box-shadow: 2px 8px 5px 5px rgba(243, 160, 160, 0.8);
+    z-index: -1;
+    font-size: 16px;
+    top: 26px;
+    right: 6%;
+    margin-right: 10px;
+    bottom: -1060%;
+    width: 250px;
+    height: 300px;
+    overflow: scroll;
+}
+
+#prdt .prdt-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    /* At the top of the tooltip */
+    left: 50%;
+    z-index: -1;
+    margin-left: 40px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.prdt-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.prdt-content a:hover {
+    background-color: #fff;
+    color: #00f;
+    font-size: 19px;
+
+}
+
+#prdt:hover .prdt-content {
+    display: block;
+}
+
+/* Product list End*/
+.main-home {
+    width: 100%;
+    height: 100vh;
+    line-height: 30px;
+    background-position-x: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1);
+    align-items: center;
+
+}
+
+.main-text {
+    background-color: #fff;
+    height: 20vh;
+    padding-top: 80px;
+    padding-left: 10px;
+    background-image: linear-gradient(red, green, yellow);
+}
+
+.main-text h5 {
+    font-size: 28px;
+    padding-bottom: 5px;
+    font-weight: 600;
+
+}
+
+.main-text h5:hover {
+    font-size: 32px;
+    opacity: 0.6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}

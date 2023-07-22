@@ -1,0 +1,616 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+}
+
+.main {
+
+    height: 60px;
+    width: 100%;
+
+}
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    float: left;
+    background-color: #000;
+    text-align: center;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .4s ease;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: block;
+    float: left;
+
+}
+
+li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 3px 10px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.search {
+    float: center;
+}
+
+/* Product list Started*/
+
+.prdt {
+    float: left;
+    z-index: 10001;
+    cursor: pointer;
+
+}
+
+
+.prdt .prdt-content {
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    width: 200px;
+    box-shadow: 2px 8px 5px 5px rgba(243, 160, 160, 0.8);
+    z-index: -1;
+    font-size: 16px;
+    top: 45px;
+    left: 6%;
+    margin-left: 120px;
+    bottom: -1060%;
+    width: 250px;
+    height: 300px;
+    overflow: scroll;
+}
+
+.prdt .prdt-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    /* At the top of the tooltip */
+    left: 50%;
+    z-index: 1;
+    margin-left: 40px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.prdt-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.prdt-content a:hover {
+    background-color: #fff;
+    color: #00f;
+    font-size: 19px;
+
+}
+
+.prdt:hover .prdt-content {
+    display: block;
+}
+
+
+/* Product list End*/
+/*search bar*/
+.search input {
+    width: 500px;
+    height: 40px;
+    margin: 5px 10px 0px 0px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-color: #fff;
+
+    padding-left: 20px;
+
+    font-size: 18px;
+}
+
+.search i.fa-magnifying-glass {
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 10px 0px 0px;
+}
+
+.search input:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    font-size: 25px;
+    color: #fff;
+    transition: all 0.4s ease;
+    padding-left: 5px;
+}
+
+.nav-icon i:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/*menu list*/
+#menu-icon {
+    font-size: 35px;
+    color: #fff;
+    z-index: 10001;
+    cursor: pointer;
+
+}
+
+#menu-icon:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+
+#menu-icon {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0%;
+    font-size: 16px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+    font-size: 19px;
+}
+
+#menu-icon:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/*head*/
+.head {
+    border: 1px solid black;
+
+}
+
+/* flex row container*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: auto;
+}
+
+/*side container*/
+.side {
+    flex: 25%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    height: auto;
+
+
+}
+
+.side>div {
+    height: auto;
+}
+
+div h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div p a {
+    padding: 3px 10px;
+    font-size: 16px;
+    text-decoration: none;
+
+
+}
+
+div p a:hover {
+    background-color: #2196F3;
+    color: #f1f1f1;
+}
+
+.bx-rupee {
+    vertical-align: middle;
+}
+
+/*main container start*/
+.main {
+    flex: 75%;
+    background-color: white;
+
+}
+
+.mobile1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.main .mobile1 img {
+    width: 190px;
+    height: 130px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.main h4 {
+    padding: 15px;
+    font-size: 25px;
+}
+
+.main .mobile2 {
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.main .mobile2 img {
+    width: 185px;
+    height: 218px;
+    padding: 6px;
+    margin-left: 2px;
+}
+
+.mobile2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.mobile2 .data {
+    padding: 20px;
+}
+
+.mobile2 .butn {
+    padding: 8px 20px;
+    font-size: 15px;
+}
+
+
+/* main container end*/
+
+/*Hidden paragraphs start*/
+#panel {
+    display: none;
+}
+
+#panel,
+.flip {
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    margin: 3px;
+}
+
+#panel1 {
+    display: none;
+}
+
+#panel1,
+.flip1 {
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    margin: 3px;
+}
+
+
+#panel2 {
+    display: none;
+}
+
+#panel2,
+.flip2 {
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    margin: 3px;
+}
+
+
+#panel3 {
+    display: none;
+}
+
+#panel3,
+.flip3 {
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    margin: 3px;
+}
+
+
+.main p {
+    font-size: 20px;
+}
+
+.main p:hover {
+    color: red;
+    font-weight: 700;
+}
+
+/*Hidden Paragraphs end*/
+
+/*grid container last*/
+
+.grd {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    column-gap: 10px;
+    box-shadow: 1px 2px 4px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.grd1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.grd1:hover {
+    color: #00f;
+    font-size: 22px;
+    font-style: italic;
+}
+
+
+/*pagination buttons start*/
+
+.pagination {
+    display: inline-block;
+    margin-top: 40px;
+    vertical-align: middle;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/*pagination buttons end*/
+
+
+
+
+
+/*Back to top*/
+.back {
+    background-color: darkslategray;
+    padding: 16px;
+    text-align: center;
+    opacity: .7;
+
+}
+
+.back a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 22px;
+    padding: 16px;
+
+}
+
+.back a:hover {
+    background-color: #f00;
+    font-size: 24px;
+}
+
+/* grid row with 4 equal columns*/
+
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px;
+    background-color: darkslategrey;
+    color: #f9f9f9;
+    opacity: 0.8;
+    /* Should be removed. Only for demonstration */
+}
+
+.column1 h4 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.column1 p {
+    padding: 10px 0px 0px 10px;
+
+}
+
+.column1 p a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.column1 p a:hover {
+    font-size: 20px;
+    color: #00f
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* global hidden button*/
+.dropbtn {
+    background-color: darkslategrey;
+    z-index: 10001;
+    padding: 16px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    opacity: .9;
+    margin: 2px;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+
+
+
+.drop {
+    position: relative;
+    text-align: center;
+    z-index: 10001;
+    padding: 6px;
+
+    background-color: darkslategrey;
+}
+
+.drop .drop-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10001;
+    left: 40%;
+    top: 42px;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 6px;
+    color: black;
+}
+
+.drop .drop-content::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    z-index: 1000;
+    margin-left: -36px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+}
+
+.drop:hover .drop-content {
+    display: block;
+}
+
+
+/*flex content */
+.flx-cont {
+    background-color: darkslategrey;
+    opacity: .9;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 15px;
+
+}
+
+.flx-cont a {
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.flx-cont a:hover {
+    color: red;
+    background-color: white;
+    font-size: 20px;
+}
+
+.grd .bx-search {
+    padding: 10px 10px;
+}

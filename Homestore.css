@@ -1,0 +1,604 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    right: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    height: 60%;
+}
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    float: left;
+    background-color: #000;
+    text-align: center;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .4s ease;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: block;
+    float: left;
+
+}
+
+li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: cornflowerblue;
+    text-align: center;
+    padding: 3px 10px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.search {
+    float: center;
+}
+
+/* Product list Started*/
+
+.prdt {
+    float: left;
+    z-index: 10001;
+    cursor: pointer;
+
+}
+
+
+.prdt .prdt-content {
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    width: 200px;
+    box-shadow: 2px 8px 5px 5px rgba(243, 160, 160, 0.8);
+    z-index: -1;
+    font-size: 16px;
+    top: 45px;
+    left: 6%;
+    margin-left: 120px;
+    bottom: -1060%;
+    width: 250px;
+    height: 300px;
+    overflow: scroll;
+}
+
+.prdt .prdt-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    /* At the top of the tooltip */
+    left: 50%;
+    z-index: 1;
+    margin-left: 40px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.prdt-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.prdt-content a:hover {
+    background-color: #fff;
+    color: #00f;
+    font-size: 19px;
+
+}
+
+.prdt:hover .prdt-content {
+    display: block;
+}
+
+
+/* Product list End*/
+/*search bar*/
+.search input {
+    width: 500px;
+    height: 40px;
+    margin: 5px 10px 0px 0px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-color: #fff;
+
+    padding-left: 20px;
+
+    font-size: 18px;
+}
+
+.search i.fa-magnifying-glass {
+    color: cornflowerblue;
+    font-size: 18px;
+    margin: 10px 10px 0px 0px;
+}
+
+.search input:hover {
+    background-color: #fff;
+    color: cornflowerblue;
+}
+
+/*search end*/
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    font-size: 25px;
+    color: cornflowerblue;
+    transition: all 0.4s ease;
+    padding-left: 5px;
+}
+
+.nav-icon i:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/*menu list*/
+#menu-icon {
+    font-size: 35px;
+    color: cornflowerblue;
+    z-index: 10001;
+    cursor: pointer;
+
+}
+
+#menu-icon:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+
+#menu-icon {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0%;
+    font-size: 16px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+    font-size: 19px;
+}
+
+#menu-icon:hover .dropdown-content {
+    display: block;
+}
+
+/*menulist end*/
+
+/*homepage content start*/
+
+
+.homepage {
+    margin: 70px;
+
+}
+
+.homepage h3 {
+    font-size: 30px;
+    color: blue;
+    opacity: .7;
+}
+
+.prdts {
+    color: cornflowerblue;
+    font-style: italic;
+}
+
+.prdts:hover {
+    color: blue;
+}
+
+/*home page flex container row*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 22%;
+    background-color: #f1f1f1;
+    padding: 15px;
+
+}
+
+div .para a {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+div .para a:hover {
+    background-color: #2196F3;
+    color: #f1f1f1;
+}
+
+/* flex box main content 75%*/
+.main {
+    flex: 78%;
+    background-color: white;
+    padding: 5px;
+}
+
+
+
+.main,
+.bg-img {
+    background-image: url("bgimgHome.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.head1 p {
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.imgs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.imgs>div {
+    width: 225px;
+    height: 180px;
+    margin: 4px 4px;
+
+}
+
+.imgs .img {
+    margin: 4px;
+    padding: 3px;
+
+}
+
+.img h4 {
+    font-size: x-large;
+    font-weight: 500;
+    display: inline-block;
+    padding: 3px;
+}
+
+.img h4:hover {
+    border: 2px solid blue;
+    color: blue;
+    background-color: #f9f9f9;
+}
+
+/*Clock Container flex Box*/
+
+
+h2 {
+    font-size: 50px;
+    color: lightblue;
+}
+
+h2:hover {
+
+    color: blue;
+}
+
+
+/* clock flex container*/
+
+.clk-Container {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.clk-Container>div {
+    width: 225px;
+    margin: 6px 10px 20px 6px;
+    height: 240px;
+    line-height: 160px;
+}
+
+.clk-Container .img-clk {
+    padding-bottom: 2px 10px 20px;
+}
+
+/*Stickers grid container*/
+
+
+.img-stk1 {
+    grid-area: myArea;
+}
+
+.imgstick1 {
+    display: grid;
+    grid-template-areas: 'myArea myArea .' 'myArea myArea .';
+    grid-area: 6px;
+    background-image: linear-gradient(to right, green, violet, red, yellow, indigo, blue);
+    padding: 10px;
+}
+
+.imgstick1>div {
+
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+
+.imgstick2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+
+
+}
+
+.imgstick2>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+
+}
+
+
+/* idol flex container*/
+.idl-Container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 4px;
+    background-color: #95e3e1;
+}
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    border: 2px sloid red;
+    opacity: .7;
+
+}
+
+.column img:hover {
+    opacity: 1.0;
+}
+
+@media (max-width: 800px) {
+    .column {
+        flex: 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/*frame grid container*/
+.frm-Container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #219677;
+    padding: 10px;
+}
+
+.img-frm {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+/*Back to top*/
+.back {
+    background-color: darkslategray;
+    padding: 16px;
+    text-align: center;
+    opacity: .7;
+
+}
+
+.back a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 22px;
+    padding: 16px;
+
+}
+
+.back a:hover {
+    background-color: #f00;
+    font-size: 24px;
+}
+
+/* grid row with 4 equal columns*/
+
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px;
+    background-color: darkslategrey;
+    color: #f9f9f9;
+    opacity: 0.8;
+    /* Should be removed. Only for demonstration */
+}
+
+.column1 h4 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.column1 p {
+    padding: 10px 0px 0px 10px;
+
+}
+
+.column1 p a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.column1 p a:hover {
+    font-size: 20px;
+    color: #00f
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* global hidden button*/
+.dropbtn {
+    background-color: darkslategrey;
+    z-index: 10001;
+    padding: 16px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    opacity: .9;
+    margin: 2px;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+
+
+
+.drop {
+    position: relative;
+    text-align: center;
+    z-index: 10001;
+    padding: 6px;
+
+    background-color: darkslategrey;
+}
+
+.drop .drop-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10001;
+    left: 40%;
+    top: 42px;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 6px;
+    color: black;
+}
+
+.drop .drop-content::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    z-index: 1000;
+    margin-left: -36px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+}
+
+.drop:hover .drop-content {
+    display: block;
+}
+
+
+/*flex content */
+.flx-cont {
+    background-color: darkslategrey;
+    opacity: .9;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 15px;
+
+}
+
+.flx-cont a {
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.flx-cont a:hover {
+    color: red;
+    background-color: white;
+    font-size: 20px;
+}
